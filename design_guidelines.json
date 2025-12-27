@@ -1,0 +1,131 @@
+{
+  "typography": {
+    "font_family": {
+      "heading": "Manrope, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    ],
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-extrabold tracking-tight",
+      "h2": "text-3xl font-bold tracking-tight",
+      "h3": "text-2xl font-semibold tracking-tight",
+      "p": "text-base leading-relaxed text-muted-foreground",
+      "small": "text-sm font-medium leading-none"
+    }
+  },
+  "colors": {
+    "palette_name": "Swiss Utility Trust",
+    "light": {
+      "background": "210 40% 98%",
+      "foreground": "222 47% 11%",
+      "card": "0 0% 100%",
+      "card_foreground": "222 47% 11%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "222 47% 11%",
+      "primary": "222 47% 11%",
+      "primary_foreground": "210 40% 98%",
+      "secondary": "210 40% 96.1%",
+      "secondary_foreground": "222 47% 11%",
+      "muted": "210 40% 96.1%",
+      "muted_foreground": "215 16% 47%",
+      "accent": "210 40% 96.1%",
+      "accent_foreground": "222 47% 11%",
+      "destructive": "0 84.2% 60.2%",
+      "destructive_foreground": "210 40% 98%",
+      "border": "214 32% 91%",
+      "input": "214 32% 91%",
+      "ring": "222 47% 11%",
+      "chart_1": "160 84% 39%",
+      "chart_2": "222 47% 11%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    },
+    "dark": {
+      "background": "222 47% 11%",
+      "foreground": "210 40% 98%",
+      "card": "222 47% 11%",
+      "card_foreground": "210 40% 98%",
+      "popover": "222 47% 11%",
+      "popover_foreground": "210 40% 98%",
+      "primary": "210 40% 98%",
+      "primary_foreground": "222 47% 11%",
+      "secondary": "217 32% 17%",
+      "secondary_foreground": "210 40% 98%",
+      "muted": "217 32% 17%",
+      "muted_foreground": "215 20% 65%",
+      "accent": "217 32% 17%",
+      "accent_foreground": "210 40% 98%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive_foreground": "210 40% 98%",
+      "border": "217 32% 17%",
+      "input": "217 32% 17%",
+      "ring": "212 26% 83%",
+      "chart_1": "160 84% 39%",
+      "chart_2": "210 40% 98%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    }
+  },
+  "layout": {
+    "grid_system": "The Control Room Grid",
+    "container": "max-w-7xl mx-auto p-6 md:p-8 lg:p-12",
+    "spacing": {
+      "section_gap": "gap-8",
+      "card_padding": "p-6",
+      "internal_gap": "gap-4"
+    },
+    "radius": "0.5rem"
+  },
+  "components": {
+    "buttons": {
+      "default": "rounded-md font-medium transition-all active:scale-95",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+      "ghost": "hover:bg-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "style": "bg-card text-card-foreground rounded-lg border border-border/50 shadow-sm hover:shadow-md transition-shadow duration-200"
+    },
+    "inputs": {
+      "style": "rounded-md border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "bg-white/70 dark:bg-black/60 backdrop-blur-xl border border-white/20 shadow-sm",
+    "gradients": "No full gradients. Use subtle mesh gradients in hero backgrounds only.",
+    "shadows": "shadow-sm for cards, shadow-lg for dropdowns/modals"
+  },
+  "image_urls": {
+    "dashboard_hero": "https://images.pexels.com/photos/6203311/pexels-photo-6203311.jpeg",
+    "login_bg": "https://images.pexels.com/photos/35322873/pexels-photo-35322873.jpeg",
+    "placeholder_avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  },
+  "instructions_to_main_agent": [
+    "Use 'Manrope' for all Headings (h1-h3) and 'IBM Plex Sans' for body text and data tables.",
+    "Implement the 'Control Room Grid' for the dashboard: dense, data-rich, but with 16px-24px gaps.",
+    "Use the defined HSL color values in index.css. Do not use hex codes directly in components.",
+    "For charts, use Recharts with the custom 'chart_1' through 'chart_5' colors defined in the palette.",
+    "Ensure all interactive elements have hover states defined (e.g., hover:bg-accent).",
+    "Use 'sonner' for all toast notifications.",
+    "Add 'data-testid' to all interactive elements.",
+    "Do not use 'Inter' font. Use the imported fonts.",
+    "For the 'Add Transaction' button, use the Primary color but ensure it has a distinct position or size to stand out."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky headers or overlays.",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠 etc.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary."
+  ]
+}
