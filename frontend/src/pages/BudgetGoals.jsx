@@ -400,7 +400,7 @@ const BudgetGoals = () => {
                 <Label>Type</Label>
                 <Select 
                   value={formData.type} 
-                  onValueChange={(v) => setFormData({...formData, type: v, category_id: ""})}
+                  onValueChange={(v) => setFormData({...formData, type: v, category_id: "all"})}
                 >
                   <SelectTrigger data-testid="goal-type-select">
                     <SelectValue />
