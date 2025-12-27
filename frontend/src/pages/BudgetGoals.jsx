@@ -65,7 +65,7 @@ const BudgetGoals = () => {
     name: "",
     target_amount: "",
     type: "expense",
-    category_id: "",
+    category_id: "all",
     period: "monthly",
     start_date: startOfMonth(new Date()),
     end_date: endOfMonth(new Date()),
