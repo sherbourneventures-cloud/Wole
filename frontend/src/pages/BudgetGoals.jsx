@@ -117,7 +117,7 @@ const BudgetGoals = () => {
       const payload = {
         ...formData,
         target_amount: parseFloat(formData.target_amount),
-        category_id: formData.category_id || null,
+        category_id: formData.category_id === "all" ? null : formData.category_id,
         start_date: format(formData.start_date, 'yyyy-MM-dd'),
         end_date: format(formData.end_date, 'yyyy-MM-dd'),
       };
