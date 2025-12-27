@@ -205,22 +205,24 @@ async def delete_transaction(transaction_id: str):
 async def get_budget_goals():
     goals = await db.budget_goals.find({}, {"_id": 0}).to_list(1000)
     
-    # Calculate current amounts based on transactions
+    # Fetch all transactions once to avoid N+1 queries
+    all_transactions = await db.transactions.find({}, {"_id": 0}).to_list(1000)
+    
+    # Calculate current amounts for each goal
     for goal in goals:
-        query = {"date": {"$gte": goal["start_date"], "$lte": goal["end_date"]}}
-        if goal["type"] in ["income", "expense"]:
-            query["type"] = goal["type"]
-        if goal.get("category_id"):
-            query["category_id"] = goal["category_id"]
-        
-        transactions = await db.transactions.find(query, {"_id": 0}).to_list(1000)
+        relevant_transactions = [
+            t for t in all_transactions
+            if goal["start_date"] <= t["date"] <= goal["end_date"]
+            and (goal["type"] not in ["income", "expense"] or t["type"] == goal["type"])
+            and (not goal.get("category_id") or t["category_id"] == goal["category_id"])
+        ]
         
         if goal["type"] == "savings":
-            income = sum(t["amount"] for t in transactions if t["type"] == "income")
-            expense = sum(t["amount"] for t in transactions if t["type"] == "expense")
+            income = sum(t["amount"] for t in relevant_transactions if t["type"] == "income")
+            expense = sum(t["amount"] for t in relevant_transactions if t["type"] == "expense")
             goal["current_amount"] = income - expense
         else:
-            goal["current_amount"] = sum(t["amount"] for t in transactions)
+            goal["current_amount"] = sum(t["amount"] for t in relevant_transactions)
     
     return goals
 
