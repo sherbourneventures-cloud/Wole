@@ -1,0 +1,148 @@
+{
+  "timestamp": "2025-12-27T11:07:33.219784",
+  "total_tests": 28,
+  "passed_tests": 28,
+  "success_rate": 100.0,
+  "results": [
+    {
+      "test": "API connectivity",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Seed default categories",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get all categories",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create new category",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update category",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete category",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get categories for transaction test",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get all transactions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create new transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get transactions with type filter",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get all budget goals",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create new budget goal",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update budget goal",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete budget goal",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get dashboard data",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Dashboard has total_income",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has total_expense",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has balance",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has transaction_count",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has monthly_chart",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has expense_by_category",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has income_by_category",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Dashboard has recent_transactions",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Create category without name (should fail)",
+      "success": true,
+      "details": "Status: 422"
+    },
+    {
+      "test": "Create transaction with invalid category (should fail)",
+      "success": true,
+      "details": "Status: 400"
+    },
+    {
+      "test": "Get non-existent category (should fail)",
+      "success": true,
+      "details": "Status: 404"
+    }
+  ]
+}
