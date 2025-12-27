@@ -144,7 +144,7 @@ const BudgetGoals = () => {
       name: goal.name,
       target_amount: goal.target_amount.toString(),
       type: goal.type,
-      category_id: goal.category_id || "",
+      category_id: goal.category_id || "all",
       period: goal.period,
       start_date: new Date(goal.start_date),
       end_date: new Date(goal.end_date),
