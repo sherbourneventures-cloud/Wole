@@ -148,13 +148,17 @@ async def create_visitor_request(request: VisitorRequestCreate):
     
     return visitor_obj
 
-@api_router.get("/visitor-requests", response_model=List[VisitorRequest])
+@api_router.get("/visitor-requests", response_model=List[VisitorRequestListItem])
 async def get_visitor_requests(location_id: Optional[str] = None):
     query = {}
     if location_id:
         query["location_id"] = location_id
-    requests = await db.visitor_requests.find(query).sort("created_at", -1).to_list(1000)
-    return [VisitorRequest(**req) for req in requests]
+    # Use projection to exclude large media_base64 field for performance
+    requests = await db.visitor_requests.find(
+        query, 
+        {"media_base64": 0}
+    ).sort("created_at", -1).to_list(1000)
+    return [VisitorRequestListItem(**req) for req in requests]
 
 @api_router.get("/visitor-requests/{request_id}", response_model=VisitorRequest)
 async def get_visitor_request(request_id: str):
