@@ -790,7 +790,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
     
     if "bending" in results:
         bend = results["bending"]
-        story.append(Paragraph("Design Moment and Reinforcement:", styles['Heading3']))
+        story.append(Paragraph("Design Moment and Reinforcement:", styles['CustomHeading3']))
         bend_data = [
             ["Design Moment M_Ed:", f"{bend.get('M_Ed', 'N/A')} kNm/m"],
             ["K factor:", f"{bend.get('K', 'N/A')}"],
