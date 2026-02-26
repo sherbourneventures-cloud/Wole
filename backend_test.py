@@ -28,17 +28,20 @@ def make_request(method, endpoint, data=None, params=None):
     url = f"{BASE_URL}{endpoint}"
     try:
         if method == "GET":
-            response = requests.get(url, params=params)
+            response = requests.get(url, params=params, timeout=10)
         elif method == "POST":
-            response = requests.post(url, json=data)
+            response = requests.post(url, json=data, timeout=10)
         elif method == "PATCH":
-            response = requests.patch(url, json=data, params=params)
+            response = requests.patch(url, json=data, params=params, timeout=10)
         elif method == "DELETE":
-            response = requests.delete(url)
+            response = requests.delete(url, timeout=10)
         
         return response
-    except Exception as e:
+    except requests.exceptions.RequestException as e:
         print(f"❌ Request failed: {str(e)}")
+        return None
+    except Exception as e:
+        print(f"❌ Unexpected error: {str(e)}")
         return None
 
 def test_api_health():
