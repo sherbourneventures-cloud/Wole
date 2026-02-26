@@ -1,0 +1,141 @@
+{
+  "brand_identity": {
+    "name": "BeamForge",
+    "persona": "The Architect's Logic",
+    "emotional_tone": "Precision, Stability, Authority",
+    "visual_archetype": "The Performance Pro (Engineering Edition)",
+    "description": "A high-precision structural engineering tool that feels like a modern cockpit. No clutter, just data and decision."
+  },
+  "typography": {
+    "headings": {
+      "family": "Chivo, Manrope, sans-serif",
+      "weights": ["600", "800"],
+      "tracking": "-0.02em",
+      "usage": "Use for all section titles, modal headers, and report titles. Avoid Inter."
+    },
+    "body": {
+      "family": "IBM Plex Sans, Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "General UI text, labels, and instructions."
+    },
+    "data": {
+      "family": "JetBrains Mono, Roboto Mono, monospace",
+      "weights": ["400", "500"],
+      "usage": "CRITICAL: ALL numerical values, calculation results, input fields, and code snippets."
+    }
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": "hsl(228, 15%, 5%)", 
+      "foreground": "hsl(0, 0%, 95%)",
+      "card": "hsl(228, 12%, 8%)",
+      "card_foreground": "hsl(0, 0%, 95%)",
+      "primary": "hsl(176, 96%, 69%)", 
+      "primary_foreground": "hsl(228, 15%, 5%)",
+      "secondary": "hsl(215, 20%, 20%)",
+      "secondary_foreground": "hsl(0, 0%, 90%)",
+      "muted": "hsl(215, 15%, 15%)",
+      "muted_foreground": "hsl(215, 10%, 65%)",
+      "accent": "hsl(48, 89%, 60%)",
+      "accent_foreground": "hsl(228, 15%, 5%)",
+      "destructive": "hsl(0, 80%, 60%)",
+      "destructive_foreground": "hsl(0, 0%, 100%)",
+      "border": "hsl(215, 20%, 15%)",
+      "input": "hsl(215, 20%, 15%)",
+      "ring": "hsl(176, 96%, 69%)"
+    },
+    "usage_rules": {
+      "primary": "Use ONLY for the primary 'Calculate', 'Save', or 'Generate' action. Do not overuse.",
+      "accent": "Use for warnings, critical alerts, or highlighting a specific changed value.",
+      "background": "The app is strictly dark mode for engineering comfort.",
+      "gradients": "Avoid gradients on backgrounds. Use subtle gradients only on active borders (The Tracing Beam)."
+    }
+  },
+  "spacing": {
+    "scale": "2x standard",
+    "rules": [
+      "Minimum padding for cards: p-6 or p-8",
+      "Gap between grid items: gap-6 or gap-8",
+      "Section spacing: py-12 or py-16",
+      "Input field height: h-12 (Comfortable click targets)"
+    ]
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "type": "Bento Grid (Mode B)",
+      "structure": "Grid cols-12. Summary metrics (col-span-3), Recent Projects (col-span-6), Quick Tools (col-span-3). Dense but breathable.",
+      "container": "max-w-[1600px] mx-auto p-8"
+    },
+    "design_input": {
+      "type": "Split View",
+      "structure": "Left Panel (60%): Visualizer/Canvas (Fixed). Right Panel (40%): Scrollable Input Forms.",
+      "mobile": "Stack: Visualizer on top (h-64), Inputs below."
+    },
+    "reports": {
+      "type": "Paper View",
+      "structure": "A centered div with aspect-ratio-[210/297] (A4), white background, black text. Presented inside a dark modal or viewing pane."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp edges or small radius (rounded-sm). Technical feel.",
+      "variants": {
+        "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(102,252,241,0.3)]",
+        "outline": "border border-input hover:bg-accent hover:text-accent-foreground"
+      }
+    },
+    "cards": {
+      "style": "Flat background (bg-card), 1px border (border-border). No drop shadows, use 'Inner Glow' or border highlight on hover.",
+      "hover": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "style": "bg-muted/50 border-input focus:border-primary focus:ring-1 focus:ring-primary rounded-sm font-mono text-sm"
+    },
+    "charts": {
+      "library": "Recharts",
+      "style": "Minimalist. Remove grid lines if possible, or make them very subtle (opacity 0.1). Use primary and accent colors for lines/bars."
+    }
+  },
+  "visual_enhancers": {
+    "tracing_beam": "Use a moving gradient border effect on the 'Active' input section to guide the engineer's focus.",
+    "grid_lines": "Background pattern: 20x20px grid lines with 5% opacity to resemble a blueprint.",
+    "glassmorphism": "Use heavily on sticky headers and floating toolbars: backdrop-blur-xl bg-background/80 border-b border-white/5."
+  },
+  "image_assets": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/1872165/pexels-photo-1872165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Abstract concrete geometry, use as subtle background overlay with 90% dark tint."
+    },
+    "login_visual": {
+      "url": "https://images.pexels.com/photos/29502895/pexels-photo-29502895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Engineer working on blueprints, high quality photography for login/landing side panel."
+    }
+  },
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (transition: all).",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states.",
+    "Main agent relies on provided image URLs. Missing categories = placeholders (FORBIDDEN).",
+    "Prioritize existing components in src/components/ui.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports.",
+    "Use sonner for toasts.",
+    "All interactive elements MUST include data-testid attributes."
+  ],
+  "instructions_to_main_agent": [
+    "1. UPDATE src/index.css with the provided CSS variables for the 'Performance Pro' dark theme.",
+    "2. FORCE dark mode by default in the app (add 'dark' class to html/body).",
+    "3. INSTALL missing icons if needed (lucide-react is present).",
+    "4. USE Recharts for the Magnel Diagram and Shear/Moment envelopes.",
+    "5. BUILD a 'SectionSelector' component using the abstract geometry images or SVG icons.",
+    "6. ENSURE all inputs use the 'JetBrains Mono' or monospace font family.",
+    "7. IMPLEMENT the PDF generation using a hidden print-friendly view."
+  ]
+}
