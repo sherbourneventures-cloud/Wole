@@ -854,7 +854,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
                 story.append(t)
     
     if "reinforcement_x" in results:
-        story.append(Paragraph("X-Direction Reinforcement:", styles['Heading3']))
+        story.append(Paragraph("X-Direction Reinforcement:", styles['CustomHeading3']))
         rx = results["reinforcement_x"]
         rx_data = [
             ["As required:", f"{rx.get('As_required', 'N/A')} mm²/m"],
@@ -866,7 +866,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
         story.append(t)
         
     if "reinforcement_y" in results:
-        story.append(Paragraph("Y-Direction Reinforcement:", styles['Heading3']))
+        story.append(Paragraph("Y-Direction Reinforcement:", styles['CustomHeading3']))
         ry = results["reinforcement_y"]
         ry_data = [
             ["As required:", f"{ry.get('As_required', 'N/A')} mm²/m"],
