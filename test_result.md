@@ -131,6 +131,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Visitor request creation with media_base64, status updates working."
+      - working: true
+        agent: "testing"
+        comment: "Comprehensive API testing completed. All endpoints working: POST /api/visitor-requests (create with location validation), GET /api/visitor-requests (with location_id filter), GET /api/visitor-requests/{id} (specific), PATCH /api/visitor-requests/{id}/status (approve/deny). Automatic notification creation verified. Error handling for invalid locations confirmed (404)."
 
   - task: "Notification API"
     implemented: true
