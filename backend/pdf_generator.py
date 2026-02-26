@@ -60,9 +60,9 @@ def create_styles():
         fontName='Helvetica-Bold'
     ))
     
-    # Body text
+    # Custom body text - using different name to avoid conflict with built-in BodyText
     styles.add(ParagraphStyle(
-        name='BodyText',
+        name='CustomBody',
         parent=styles['Normal'],
         fontSize=10,
         alignment=TA_JUSTIFY,
