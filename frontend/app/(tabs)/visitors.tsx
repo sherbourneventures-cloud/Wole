@@ -118,9 +118,18 @@ export default function VisitorsScreen() {
   const renderVisitorItem = ({ item }: { item: VisitorRequest }) => (
     <TouchableOpacity
       style={styles.visitorCard}
-      onPress={() => {
-        setSelectedVisitor(item);
-        setDetailModalVisible(true);
+      onPress={async () => {
+        // Fetch full visitor details including media
+        try {
+          const fullDetails = await api.getVisitorRequest(item.id);
+          setSelectedVisitor(fullDetails);
+          setDetailModalVisible(true);
+        } catch (error) {
+          console.error('Error fetching visitor details:', error);
+          // Fallback to list data if fetch fails
+          setSelectedVisitor(item);
+          setDetailModalVisible(true);
+        }
       }}
     >
       <View style={styles.visitorHeader}>
