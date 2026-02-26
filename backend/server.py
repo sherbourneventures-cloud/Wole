@@ -348,7 +348,7 @@ def calculate_two_way_slab(input_data: SlabInput) -> dict:
     
     # Geometry
     Lx = input_data.span_x  # shorter span (mm)
-    Ly = input_data.span_y  # longer span (mm)
+    Ly = input_data.span_y or input_data.span_x  # longer span (mm), default to span_x if not provided
     if Ly < Lx:
         Lx, Ly = Ly, Lx
     
