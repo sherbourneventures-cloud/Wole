@@ -62,6 +62,19 @@ class VisitorRequestCreate(BaseModel):
     media_type: str
     media_base64: str
 
+class VisitorRequestListItem(BaseModel):
+    """Response model for list queries - excludes large media_base64 field"""
+    id: str
+    location_id: str
+    visitor_name: str
+    visitor_phone: str
+    visitor_email: str
+    purpose: str
+    media_type: str
+    status: str
+    created_at: datetime
+    notification_sent: bool
+
 class Notification(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     owner_email: str
