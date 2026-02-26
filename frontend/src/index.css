@@ -55,9 +55,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     * {
         @apply border-border;
     }
-    html {
-        @apply dark;
-    }
     body {
         @apply bg-background text-foreground;
     }
@@ -73,7 +70,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Glassmorphism */
 .glass {
-    @apply backdrop-blur-xl bg-background/80 border-b border-white/5;
+    backdrop-filter: blur(16px);
+    background-color: hsl(228 15% 5% / 0.8);
+    border-bottom: 1px solid hsl(0 0% 100% / 0.05);
 }
 
 /* Tracing beam effect */
@@ -102,20 +101,24 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Card hover effect */
 .card-hover {
-    @apply transition-colors duration-300;
+    transition: border-color 0.3s ease;
 }
 
 .card-hover:hover {
-    @apply border-primary/50;
+    border-color: hsl(176 96% 69% / 0.5);
 }
 
 /* Status badges */
 .status-pass {
-    @apply bg-emerald-500/20 text-emerald-400 border-emerald-500/30;
+    background-color: hsl(142 76% 36% / 0.2);
+    color: hsl(142 76% 56%);
+    border: 1px solid hsl(142 76% 36% / 0.3);
 }
 
 .status-fail {
-    @apply bg-red-500/20 text-red-400 border-red-500/30;
+    background-color: hsl(0 80% 60% / 0.2);
+    color: hsl(0 80% 70%);
+    border: 1px solid hsl(0 80% 60% / 0.3);
 }
 
 /* Input styling */
@@ -150,42 +153,107 @@ input[type="number"] {
 
 /* Data input fields */
 .data-input {
-    @apply font-mono text-sm bg-muted/50 border-input focus:border-primary focus:ring-1 focus:ring-primary rounded-sm;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    background-color: hsl(215 15% 15% / 0.5);
+    border-color: hsl(215 20% 15%);
+    border-radius: 0.125rem;
+}
+
+.data-input:focus {
+    border-color: hsl(176 96% 69%);
+    box-shadow: 0 0 0 1px hsl(176 96% 69%);
 }
 
 /* Section selector cards */
 .section-card {
-    @apply p-4 bg-card border border-border rounded-sm cursor-pointer transition-all duration-200;
+    padding: 1rem;
+    background-color: hsl(228 12% 8%);
+    border: 1px solid hsl(215 20% 15%);
+    border-radius: 0.125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .section-card:hover {
-    @apply border-primary/50 bg-card/80;
+    border-color: hsl(176 96% 69% / 0.5);
+    background-color: hsl(228 12% 8% / 0.8);
 }
 
 .section-card.selected {
-    @apply border-primary bg-primary/10;
+    border-color: hsl(176 96% 69%);
+    background-color: hsl(176 96% 69% / 0.1);
 }
 
 /* Results table */
 .results-table {
-    @apply w-full border-collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .results-table th {
-    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-muted/50 border-b border-border;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(215 10% 65%);
+    background-color: hsl(215 15% 15% / 0.5);
+    border-bottom: 1px solid hsl(215 20% 15%);
 }
 
 .results-table td {
-    @apply px-4 py-3 text-sm border-b border-border/50;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid hsl(215 20% 15% / 0.5);
 }
 
 .results-table tr:hover td {
-    @apply bg-muted/30;
+    background-color: hsl(215 15% 15% / 0.3);
 }
 
 /* Chart container */
 .chart-container {
-    @apply bg-card border border-border rounded-sm p-4;
+    background-color: hsl(228 12% 8%);
+    border: 1px solid hsl(215 20% 15%);
+    border-radius: 0.125rem;
+    padding: 1rem;
+}
+
+/* Profile cards */
+.profile-card {
+    padding: 1rem;
+    background-color: hsl(215 15% 15% / 0.3);
+    border: 1px solid hsl(215 20% 15%);
+    border-radius: 0.125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-card:hover {
+    border-color: hsl(176 96% 69% / 0.5);
+}
+
+.profile-card.selected {
+    border-color: hsl(176 96% 69%);
+    background-color: hsl(176 96% 69% / 0.1);
+}
+
+/* Loading animation */
+.loading-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background-color: hsl(215 15% 15%);
+    border-radius: 0.25rem;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 /* Debug wrapper fix */
