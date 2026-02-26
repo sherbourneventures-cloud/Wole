@@ -1,0 +1,165 @@
+{
+  "identity": {
+    "brand_name": "Segun Labiran and Associates (SL&A)",
+    "mission": "To provide precision-driven civil engineering solutions that define the skyline of Nigeria.",
+    "aesthetics": "Structural, Matte, Precise, Monolithic, Engineering-First.",
+    "emotional_tone": "Trustworthy, Established, Technical, Solid.",
+    "theme_mode": "light"
+  },
+  "typography": {
+    "font_loading_strategy": "Google Fonts",
+    "headings": {
+      "family": "Manrope",
+      "weights": [600, 700, 800],
+      "usage": "All section titles, hero text, and major calls to action. Use 'tracking-tight' for sizes over 32px.",
+      "fallback": "sans-serif"
+    },
+    "body": {
+      "family": "Public Sans",
+      "weights": [400, 500],
+      "usage": "Paragraphs, UI labels, data tables.",
+      "fallback": "system-ui"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "usage": "Technical data, measurements, and code snippets."
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-extrabold tracking-tighter leading-none",
+      "h2": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold tracking-tight",
+      "p": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "label": "text-xs font-bold uppercase tracking-widest text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#1e293b",
+        "foreground": "#f8fafc",
+        "description": "Slate-800 - Deep structural grey for main actions and text."
+      },
+      "secondary": {
+        "DEFAULT": "#cbd5e1",
+        "foreground": "#0f172a",
+        "description": "Slate-300 - Matte silver/grey for secondary elements."
+      },
+      "accent": {
+        "DEFAULT": "#475569",
+        "foreground": "#ffffff",
+        "description": "Slate-600 - Metallic steel for highlights."
+      },
+      "background": {
+        "DEFAULT": "#ffffff",
+        "alt": "#f8fafc",
+        "dark": "#020617"
+      },
+      "surface": {
+        "DEFAULT": "#ffffff",
+        "raised": "#f1f5f9"
+      },
+      "border": {
+        "DEFAULT": "#e2e8f0",
+        "strong": "#cbd5e1"
+      }
+    },
+    "gradients": {
+      "silver_sheen": "bg-gradient-to-br from-slate-100 to-slate-300",
+      "steel_beam": "bg-gradient-to-r from-slate-700 to-slate-900"
+    }
+  },
+  "visual_enhancers": {
+    "radius": {
+      "default": "rounded-sm",
+      "button": "rounded-sm",
+      "card": "rounded-none"
+    },
+    "shadows": {
+      "card": "shadow-[0_1px_3px_0_rgb(0,0,0,0.1),0_1px_2px_-1px_rgb(0,0,0,0.1)]",
+      "floating": "shadow-[0_20px_25px_-5px_rgb(0,0,0,0.1),0_8px_10px_-6px_rgb(0,0,0,0.1)]",
+      "hard": "shadow-[4px_4px_0px_0px_rgba(15,23,42,0.1)]"
+    },
+    "borders": {
+      "style": "solid",
+      "width": "1px",
+      "color": "border-slate-200",
+      "highlight": "border-l-4 border-l-slate-800"
+    },
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")",
+      "grid": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+    }
+  },
+  "layout_strategies": {
+    "marketing": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_spacing": "py-24 md:py-32",
+      "grid_style": "grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12"
+    },
+    "dashboard": {
+      "layout": "sidebar-fixed header-fixed content-scrollable",
+      "density": "high",
+      "card_style": "bg-white border border-slate-200 shadow-sm"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-slate-800 rounded-sm font-semibold tracking-wide uppercase text-sm px-8 py-3 transition-all duration-300 shadow-sm hover:shadow-md active:translate-y-[1px]",
+      "secondary": "bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-sm font-medium uppercase text-sm px-6 py-3 transition-all",
+      "ghost": "text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-sm px-4 py-2 uppercase text-xs font-bold tracking-widest"
+    },
+    "cards": {
+      "feature": "group relative overflow-hidden bg-white border border-slate-200 p-8 hover:border-slate-400 transition-colors duration-300",
+      "project": "relative aspect-[4/3] overflow-hidden bg-slate-100 group cursor-pointer",
+      "stats": "flex flex-col items-center justify-center p-6 bg-slate-50 border border-slate-100"
+    },
+    "inputs": {
+      "default": "flex h-12 w-full rounded-sm border border-slate-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": "https://images.unsplash.com/photo-1763333408639-6073d0587744?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBjb25jcmV0ZSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nJTIwc3RydWN0dXJlfGVufDB8fHx8MTc3MjA4Mjc3MHww&ixlib=rb-4.1.0&q=85",
+      "about_engineer": "https://images.pexels.com/photos/4160237/pexels-photo-4160237.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "services_blueprint": "https://images.pexels.com/photos/8470842/pexels-photo-8470842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "project_1": "https://images.unsplash.com/photo-1761287347782-f3b433c0cee3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBjb25jcmV0ZSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nJTIwc3RydWN0dXJlfGVufDB8fHx8MTc3MjA4Mjc3MHww&ixlib=rb-4.1.0&q=85",
+      "project_2": "https://images.unsplash.com/photo-1739599211500-74e04a9ca175?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb25jcmV0ZSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nJTIwc3RydWN0dXJlfGVufDB8fHx8MTc3MjA4Mjc3MHww&ixlib=rb-4.1.0&q=85",
+      "site_work": "https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHxjaXZpbCUyMGVuZ2luZWVyJTIwY29uc3RydWN0aW9uJTIwc2l0ZSUyMGhlbG1ldCUyMGJsdWVwcmludHN8ZW58MHx8fHwxNzcyMDgyNzcxfDA&ixlib=rb-4.1.0&q=85",
+      "logo": "https://customer-assets.emergentagent.com/job_struct-request/artifacts/3aj34l5d_logo.png"
+    },
+    "treatment": "All images should have a subtle grayscale filter on the marketing pages until hovered, or use a 'multiply' blend mode with a slate overlay to maintain brand consistency."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "defaults": {
+      "duration": 0.5,
+      "ease": [0.25, 0.1, 0.25, 1.0]
+    },
+    "viewport_once": true,
+    "stagger_children": 0.1
+  },
+  "accessibility": {
+    "focus_ring": "ring-2 ring-slate-900 ring-offset-2",
+    "contrast_check": "Ensure all text on slate backgrounds is pure white or slate-50.",
+    "reduced_motion": "Respect 'prefers-reduced-motion' media query."
+  },
+  "instructions_to_main_agent": {
+    "general": "Build a civil engineering site that feels like a 'Constructed Object'. Use lines, grids, and structure. Avoid soft blobs or gradients.",
+    "theme_setup": "Update tailwind.config.js to use the Slate palette as the primary 'neutral' and 'primary'.",
+    "fonts": "Install Manrope and Public Sans via Google Fonts in index.html or index.css.",
+    "navigation": "Create a sticky header with a backdrop-blur-md and a 1px bottom border (border-slate-200). Logo on left, Nav links center, Contact button right.",
+    "hero_section": "Use the 'hero_bg' image with a heavy linear-gradient overlay (to white or slate-900). Text should be massive and clear.",
+    "admin_dashboard": "Use a sidebar layout. Keep it high-density. Use the 'Grid Borders' style for widgets.",
+    "contact_form": "Simple, clean inputs. Square corners. Use the 'Public Sans' font for labels."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts. Use asymmetry where possible.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Every interaction needs micro-animations.",
+    "Do not use AI assistant Emoji characters.",
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports.",
+    "Use sonner for toasts."
+  ]
+}
