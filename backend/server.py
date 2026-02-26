@@ -76,7 +76,7 @@ class SlabInput(BaseModel):
     
     # Geometry
     span_x: float  # mm
-    span_y: float  # mm (for two-way and flat slabs)
+    span_y: Optional[float] = None  # mm (for two-way and flat slabs)
     slab_thickness: float  # mm
     
     # Materials
