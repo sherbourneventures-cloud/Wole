@@ -503,7 +503,7 @@ def calculate_flat_slab(input_data: SlabInput) -> dict:
     
     # Geometry
     Lx = input_data.span_x
-    Ly = input_data.span_y
+    Ly = input_data.span_y or input_data.span_x  # Default to span_x if span_y not provided
     h = input_data.slab_thickness
     c = input_data.cover
     d = h - c - 10  # larger bars typically used
