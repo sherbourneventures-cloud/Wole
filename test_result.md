@@ -146,6 +146,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Notifications created automatically when visitor submits request. Mark as read working."
+      - working: true
+        agent: "testing"
+        comment: "Comprehensive API testing completed. All endpoints working: GET /api/notifications (with owner_email filter), GET /api/notifications/count (unread count), PATCH /api/notifications/{id}/read (mark single as read), PATCH /api/notifications/mark-all-read (mark all as read). Automatic notification creation verified - when visitor requests are created, notifications are properly generated for location owner. Email notifications are MOCKED and logged to backend console."
 
 frontend:
   - task: "Welcome/Onboarding Screen"
