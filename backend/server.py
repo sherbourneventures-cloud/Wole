@@ -695,9 +695,14 @@ def generate_pdf_report(project: dict) -> BytesIO:
     doc = SimpleDocTemplate(buffer, pagesize=A4, rightMargin=20*mm, leftMargin=20*mm, topMargin=20*mm, bottomMargin=20*mm)
     
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name='Title2', parent=styles['Title'], fontSize=18, spaceAfter=12))
-    styles.add(ParagraphStyle(name='Heading3', parent=styles['Heading2'], fontSize=12, spaceAfter=6))
-    styles.add(ParagraphStyle(name='SmallBody', parent=styles['Normal'], fontSize=9))
+    
+    # Check if style exists before adding
+    if 'Title2' not in styles:
+        styles.add(ParagraphStyle(name='Title2', parent=styles['Title'], fontSize=18, spaceAfter=12))
+    if 'CustomHeading3' not in styles:
+        styles.add(ParagraphStyle(name='CustomHeading3', parent=styles['Heading2'], fontSize=12, spaceAfter=6))
+    if 'SmallBody' not in styles:
+        styles.add(ParagraphStyle(name='SmallBody', parent=styles['Normal'], fontSize=9))
     
     story = []
     results = project.get("results", {})
