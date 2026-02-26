@@ -803,7 +803,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
         story.append(t)
     
     if "bending_x" in results and "bending_y" in results:
-        story.append(Paragraph("X-Direction:", styles['Heading3']))
+        story.append(Paragraph("X-Direction:", styles['CustomHeading3']))
         bx = results["bending_x"]
         bend_x_data = [
             ["Moment coefficient:", f"{bx.get('alpha', 'N/A')}"],
@@ -813,7 +813,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
         t.setStyle(TableStyle([('FONTSIZE', (0, 0), (-1, -1), 9)]))
         story.append(t)
         
-        story.append(Paragraph("Y-Direction:", styles['Heading3']))
+        story.append(Paragraph("Y-Direction:", styles['CustomHeading3']))
         by = results["bending_y"]
         bend_y_data = [
             ["Moment coefficient:", f"{by.get('alpha', 'N/A')}"],
