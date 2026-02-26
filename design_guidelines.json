@@ -150,7 +150,9 @@
     "navigation": "Create a sticky header with a backdrop-blur-md and a 1px bottom border (border-slate-200). Logo on left, Nav links center, Contact button right.",
     "hero_section": "Use the 'hero_bg' image with a heavy linear-gradient overlay (to white or slate-900). Text should be massive and clear.",
     "admin_dashboard": "Use a sidebar layout. Keep it high-density. Use the 'Grid Borders' style for widgets.",
-    "contact_form": "Simple, clean inputs. Square corners. Use the 'Public Sans' font for labels."
+    "contact_form": "Simple, clean inputs. Square corners. Use the 'Public Sans' font for labels.",
+    "whatsapp_button": "Add a floating action button (bottom-right) or a prominent button in the contact section. Style it to match the brand (Slate-900 with white icon) or use a desaturated Green if necessary for recognition.",
+    "google_maps": "Embed a Google Map in the Contact section. Use a 'Grayscale' or 'Silver' map style (snazzymaps.com style) to blend with the site theme."
   },
   "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
     "Do not use generic centered layouts. Use asymmetry where possible.",
