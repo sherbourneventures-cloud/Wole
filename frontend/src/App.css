@@ -1,34 +1,99 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Additional component styles */
+
+.slab-card {
+    @apply border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-sm p-6 transition-all duration-200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.slab-card:hover {
+    @apply border-blue-600;
+    transform: translate(2px, 2px);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.result-table th {
+    @apply bg-slate-100 dark:bg-slate-800 font-bold uppercase text-xs tracking-wider text-left p-3;
 }
 
-.App-link {
-    color: #61dafb;
+.result-table td {
+    @apply border-b border-slate-100 dark:border-slate-800 p-3 font-mono text-sm;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.result-table tr:hover td {
+    @apply bg-slate-50 dark:bg-slate-800/50;
+}
+
+/* Form layout */
+.form-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+/* Split screen layout */
+.split-screen {
+    @apply flex flex-col lg:flex-row min-h-screen;
+}
+
+.split-left {
+    @apply w-full lg:w-2/5 p-6 overflow-y-auto border-r border-slate-200 dark:border-slate-700;
+}
+
+.split-right {
+    @apply w-full lg:w-3/5 p-6 bg-slate-50 dark:bg-slate-900 overflow-y-auto;
+}
+
+/* Button variants */
+.btn-technical {
+    @apply bg-blue-600 text-white font-mono uppercase tracking-wider px-6 py-2.5 rounded-sm transition-all duration-200;
+}
+
+.btn-technical:hover {
+    @apply bg-blue-700;
+    transform: translate(2px, 2px);
+}
+
+.btn-technical:active {
+    transform: translate(0, 0);
+}
+
+/* Section headers */
+.section-header {
+    @apply font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4 pb-2 border-b border-slate-200 dark:border-slate-700;
+}
+
+/* Value display */
+.value-display {
+    @apply font-mono text-lg font-semibold text-slate-900 dark:text-white;
+}
+
+.value-unit {
+    @apply font-mono text-sm text-slate-500 dark:text-slate-400 ml-1;
+}
+
+/* Eurocode reference tags */
+.ec-ref {
+    @apply inline-block text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-0.5 rounded-sm;
+}
+
+/* Utilization bars */
+.utilization-bar {
+    @apply h-2 rounded-sm overflow-hidden bg-slate-200 dark:bg-slate-700;
+}
+
+.utilization-fill {
+    @apply h-full transition-all duration-500 ease-out;
+}
+
+.utilization-fill.ok {
+    @apply bg-green-500;
+}
+
+.utilization-fill.warning {
+    @apply bg-yellow-500;
+}
+
+.utilization-fill.critical {
+    @apply bg-red-500;
+}
+
+/* Diagram container */
+.diagram-container {
+    @apply bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-sm p-4;
 }
