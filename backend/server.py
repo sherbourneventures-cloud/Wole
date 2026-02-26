@@ -844,7 +844,7 @@ def generate_pdf_report(project: dict) -> BytesIO:
             story.append(t)
         else:  # Flat slab
             for strip_name, strip_data in rebar.items():
-                story.append(Paragraph(strip_name.replace("_", " ").title() + ":", styles['Heading3']))
+                story.append(Paragraph(strip_name.replace("_", " ").title() + ":", styles['CustomHeading3']))
                 strip_table = [
                     ["Moment:", f"{strip_data.get('moment', 'N/A')} kNm/m"],
                     ["As required:", f"{strip_data.get('As_req', 'N/A')} mm²/m"],
