@@ -1,22 +1,31 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "QR Visitor Alert",
+    "slug": "qr-visitor-alert",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "frontend",
+    "scheme": "qr-visitor-alert",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.visitor.qralert",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Take selfie for visitor verification",
+        "NSMicrophoneUsageDescription": "Record video for visitor verification"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#0f0f23"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.visitor.qralert",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -26,12 +35,11 @@
     "plugins": [
       "expo-router",
       [
-        "expo-splash-screen",
+        "expo-camera",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#000"
+          "cameraPermission": "Take selfie for visitor verification",
+          "microphonePermission": "Record video for visitor verification",
+          "recordAudioAndroid": true
         }
       ]
     ],
