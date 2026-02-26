@@ -1,34 +1,139 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Navigation */
+.nav-link {
+    @apply px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+.nav-link.active {
+    @apply text-primary;
+}
+
+/* Page layouts */
+.page-container {
+    @apply max-w-[1600px] mx-auto px-6 lg:px-8 py-8;
+}
+
+/* Split view */
+.split-view {
+    @apply grid grid-cols-1 lg:grid-cols-5 gap-6 min-h-[calc(100vh-120px)];
+}
+
+.split-view-left {
+    @apply lg:col-span-3 bg-card border border-border rounded-sm overflow-hidden;
+}
+
+.split-view-right {
+    @apply lg:col-span-2 overflow-y-auto;
+}
+
+/* Bento grid */
+.bento-grid {
+    @apply grid grid-cols-12 gap-6;
+}
+
+/* Form sections */
+.form-section {
+    @apply bg-card border border-border rounded-sm p-6 mb-6;
+}
+
+.form-section-title {
+    @apply text-lg font-semibold text-foreground mb-4 pb-2 border-b border-border;
+}
+
+/* Input groups */
+.input-group {
+    @apply space-y-4;
+}
+
+.input-row {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.input-field {
+    @apply space-y-2;
+}
+
+.input-label {
+    @apply text-sm font-medium text-muted-foreground;
+}
+
+.input-unit {
+    @apply text-xs text-muted-foreground ml-1;
+}
+
+/* Section type selector */
+.section-selector {
+    @apply grid grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+/* Results cards */
+.result-card {
+    @apply bg-card border border-border rounded-sm p-6;
+}
+
+.result-card-header {
+    @apply flex items-center justify-between mb-4;
+}
+
+.result-card-title {
+    @apply text-sm font-semibold text-muted-foreground uppercase tracking-wider;
+}
+
+.result-card-value {
+    @apply text-3xl font-bold text-foreground font-mono;
+}
+
+.result-card-unit {
+    @apply text-lg text-muted-foreground ml-1;
+}
+
+/* Status indicator */
+.status-indicator {
+    @apply px-3 py-1 rounded-full text-xs font-semibold border;
+}
+
+/* Diagram container */
+.diagram-container {
+    @apply w-full h-full min-h-[400px] flex items-center justify-center;
+}
+
+/* Tendon profile selector */
+.profile-selector {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.profile-card {
+    @apply p-4 bg-muted/30 border border-border rounded-sm cursor-pointer transition-all duration-200 flex flex-col items-center gap-2;
+}
+
+.profile-card:hover {
+    @apply border-primary/50;
+}
+
+.profile-card.selected {
+    @apply border-primary bg-primary/10;
+}
+
+/* Loading state */
+.loading-pulse {
+    @apply animate-pulse bg-muted rounded;
+}
+
+/* PDF preview */
+.pdf-preview {
+    @apply bg-white text-black aspect-[210/297] shadow-xl rounded overflow-hidden;
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+    .split-view {
+        @apply grid-cols-1;
     }
-    to {
-        transform: rotate(360deg);
+    
+    .split-view-left {
+        @apply h-64;
     }
 }
