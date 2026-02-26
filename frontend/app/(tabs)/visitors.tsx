@@ -25,7 +25,7 @@ interface VisitorRequest {
   visitor_email: string;
   purpose: string;
   media_type: string;
-  media_base64: string;
+  media_base64?: string; // Optional - not returned in list queries for performance
   status: string;
   created_at: string;
 }
