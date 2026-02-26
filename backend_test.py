@@ -56,9 +56,10 @@ class EC2SlabAPITester:
     def test_user_registration(self):
         """Test user registration"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.user_email = f"test_{timestamp}@example.com"
         user_data = {
             "name": f"Test User {timestamp}",
-            "email": f"test_{timestamp}@example.com",
+            "email": self.user_email,
             "password": "TestPass123!"
         }
         
