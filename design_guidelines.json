@@ -1,0 +1,183 @@
+{
+  "identity": {
+    "name": "E1 - The Structural Swiss",
+    "persona": "A precision-obsessed structural designer who believes in the beauty of raw calculation. No fluff, just data, grid lines, and absolute clarity. The UI should feel like a well-drafted blueprint: clean, high-contrast, and reliable.",
+    "theme_strategy": "Swiss & High-Contrast (Archetype 4)",
+    "emotional_tone": "Authoritative, Precise, Efficient, Trustworthy",
+    "key_principles": [
+      "Data over Decoration: Every pixel must serve the calculation.",
+      "Grid is God: Alignment is non-negotiable. Use visible grid lines to structure content.",
+      "High Contrast: Engineers work in bright offices and dark sites. Text must pop.",
+      "Feedback is Instant: Inputs trigger immediate visual updates."
+    ]
+  },
+  "typography": {
+    "font_strategy": "The Technical Pair",
+    "headings": {
+      "family": "JetBrains Mono",
+      "weights": ["700", "800"],
+      "usage": "Headings, Numerical Results, Data Labels",
+      "fallback": "monospace"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500", "600"],
+      "usage": "Long form text, Explanations, Instructions",
+      "fallback": "sans-serif"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl tracking-tight font-bold",
+      "h2": "text-3xl tracking-tight font-bold",
+      "h3": "text-xl uppercase tracking-widest font-bold",
+      "body": "text-base leading-relaxed"
+    }
+  },
+  "colors": {
+    "palette_name": "Eurocode Standard",
+    "mode": "toggle",
+    "primary": {
+      "name": "Engineering Blue",
+      "hex": "#2563EB",
+      "usage": "Primary Actions, Active States, Key Result Lines",
+      "tailwind": "bg-blue-600 text-white hover:bg-blue-700"
+    },
+    "secondary": {
+      "name": "Concrete Grey",
+      "hex": "#64748B",
+      "usage": "Secondary Text, Borders, Inactive States",
+      "tailwind": "text-slate-500 border-slate-300"
+    },
+    "accent": {
+      "name": "Safety Orange",
+      "hex": "#F97316",
+      "usage": "Warnings, Error States, Critical Failure Zones",
+      "tailwind": "text-orange-500 bg-orange-100 border-orange-200"
+    },
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#0F172A",
+      "surface_light": "#F8FAFC",
+      "surface_dark": "#1E293B"
+    },
+    "text": {
+      "light": "#0F172A",
+      "dark": "#F8FAFC",
+      "muted_light": "#475569",
+      "muted_dark": "#94A3B8"
+    }
+  },
+  "visual_enhancers": {
+    "borders": {
+      "style": "Technical",
+      "width": "1px",
+      "radius": "rounded-sm",
+      "color": "border-slate-200 dark:border-slate-700"
+    },
+    "shadows": {
+      "style": "Flat",
+      "usage": "No drop shadows. Use borders and background contrast to define depth.",
+      "hover": "translate-x-[2px] translate-y-[2px] border-primary (Tactile mechanical feel)"
+    },
+    "textures": {
+      "grid_pattern": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+      "noise": "Subtle noise overlay on sidebar/headers for 'paper' texture"
+    }
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "grid_mode": "Bento Mode B (High Density)",
+      "columns": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-4",
+      "rules": "Full height children. No jagged bottoms. Dense information packing."
+    },
+    "input_form": {
+      "style": "Split Screen",
+      "left_panel": "Scrollable Inputs (30-40% width)",
+      "right_panel": "Sticky Visualization / Diagram (60-70% width)",
+      "mobile": "Stack Input on top, Visualization sticky at bottom or togglable"
+    },
+    "report_preview": {
+      "style": "A4 Container",
+      "aspect_ratio": "aspect-[1/1.414]",
+      "shadow": "shadow-2xl",
+      "background": "bg-white text-black (Even in dark mode, preview stays white like paper)"
+    }
+  },
+  "components": {
+    "Button": {
+      "style": "Sharp or slightly rounded (rounded-sm). Uppercase text. Technical precision.",
+      "default": "bg-primary text-white hover:bg-blue-700 font-mono tracking-wider",
+      "secondary": "border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+    },
+    "Card": {
+      "style": "Bordered, No Shadow, Square corners.",
+      "classes": "border border-border bg-card text-card-foreground rounded-sm"
+    },
+    "Input": {
+      "style": "High Contrast Border. Monospace text for numbers.",
+      "classes": "border-2 border-slate-200 focus:border-primary focus:ring-0 rounded-sm font-mono bg-slate-50 dark:bg-slate-900"
+    },
+    "Table": {
+      "style": "Zebra Striped, Dense",
+      "header": "bg-slate-100 dark:bg-slate-800 font-bold uppercase text-xs tracking-wider",
+      "row": "border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "usage": {
+      "page_transition": "opacity: 0 -> 1, y: 10 -> 0 (Fast, 0.2s)",
+      "micro_interactions": "Button press scale (0.98). Input focus border expand.",
+      "charts": "Grow from bottom (bar) or draw path (line)."
+    },
+    "accessibility": "Respect prefers-reduced-motion"
+  },
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1744148621897-5fb0b6323543?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwY29uY3JldGUlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcyMTI1OTgwfDA&ixlib=rb-4.1.0&q=85",
+        "category": "hero_background",
+        "description": "Abstract geometric concrete shapes for landing page hero"
+      }
+    ],
+    "about": [
+      {
+        "url": "https://images.pexels.com/photos/3862365/pexels-photo-3862365.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "team_collaboration",
+        "description": "Engineers collaborating with blueprints and laptops"
+      }
+    ],
+    "mobile_context": [
+      {
+        "url": "https://images.unsplash.com/photo-1659353587228-5dbbebb5d98f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwyfHxjaXZpbCUyMGVuZ2luZWVyJTIwd29ya2luZyUyMG9uJTIwbGFwdG9wfGVufDB8fHx8MTc3MjEyNTk4MXww&ixlib=rb-4.1.0&q=85",
+        "category": "field_work",
+        "description": "Engineer with tablet on site"
+      }
+    ],
+    "textures": [
+      {
+        "url": "https://images.unsplash.com/photo-1761543591927-0efde0ad3e8f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwY29uY3JldGUlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcyMTI1OTgwfDA&ixlib=rb-4.1.0&q=85",
+        "category": "texture_concrete",
+        "description": "Concrete texture for headers/footers"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "INSTALL framer-motion: 'yarn add framer-motion'",
+    "INSTALL lucide-react (if not present): 'yarn add lucide-react'",
+    "INSTALL recharts (if not present): 'yarn add recharts'",
+    "CONFIGURE TAILWIND: Add 'JetBrains Mono' and 'Manrope' to font families.",
+    "USE SHADCN: Heavily customize radius to '0.2rem' (sm) for that sharp technical feel.",
+    "LAYOUT: Use the 'Split Screen' layout for the 'New Design' page. It is critical for engineering usability.",
+    "THEME: Implement the 'Eurocode Standard' color palette defined above.",
+    "CHARTING: Use Recharts for Bending Moment and Shear Force diagrams. Style them with the Primary Blue stroke and transparent fill with vertical grid lines."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do NOT use gradients for backgrounds. Use solid colors or subtle noise textures.",
+    "Do NOT use rounded corners > 6px. Keep it sharp.",
+    "Inputs must have high contrast borders. Engineers hate faint inputs.",
+    "Always use 'data-testid' for interactive elements.",
+    "Use 'sonner' for toast notifications.",
+    "For the PDF Export feature, create a dedicated 'Print Layout' component that renders the data in a clean, A4-friendly format."
+  ]
+}
